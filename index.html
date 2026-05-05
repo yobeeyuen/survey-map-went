@@ -19,12 +19,11 @@
 
     // Your Custom Georeferenced Image Tiles
     // Use the GitHub URL if you are testing online, or './tiles/...' for local
-    L.tileLayer('https://yobeeyuen.github.io/survey-map-went/tiles/{z}/{x}/{y}.png', {
-        minZoom: 15,
-        maxZoom: 20,
-        tms: false,
-        opacity: 0.8
-    }).addTo(map);
+    L.tileLayer('./tiles/{z}/{x}/{y}.png', {
+    tms: false, // Try 'true' if the image is upside down or missing
+    opacity: 0.8,
+    attribution: 'WENT Landfill Imagery'
+}).addTo(map);
 </script>
 </body>
 </html>
