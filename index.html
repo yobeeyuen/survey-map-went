@@ -11,18 +11,20 @@
     <div id="map"></div>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        // Replace these coordinates with your site center (Lat, Lng)
-        var map = L.map('map').setView([12682869.9, 2561949.7], 16);
+        // Use Decimal Degrees for the WENT site area
+    var map = L.map('map').setView([22.4184, 113.931], 15); 
 
-        // Standard OpenStreetMap Base
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    // Standard OpenStreetMap Base
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-        // Your Custom Georeferenced Image Tiles
-        // The path './tiles/{z}/{x}/{y}.png' looks for the folder you just made
-        L.tileLayer('./tiles/{z}/{x}/{y}.png', {
-            maxZoom: 20,
-            opacity: 0.8
-        }).addTo(map);
-    </script>
+    // Your Custom Georeferenced Image Tiles
+    // Use the GitHub URL if you are testing online, or './tiles/...' for local
+    L.tileLayer('https://yobeeyuen.github.io/survey-map-went/tiles/{z}/{x}/{y}.png', {
+        minZoom: 15,
+        maxZoom: 20,
+        tms: false,
+        opacity: 0.8
+    }).addTo(map);
+</script>
 </body>
 </html>
