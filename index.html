@@ -19,20 +19,11 @@
 
     // Your Custom Georeferenced Image Tiles
     // Use the GitHub URL if you are testing online, or './tiles/...' for local
-<<<<<<< HEAD
     L.tileLayer('./tiles/{z}/{x}/{y}.png', {
-    tms: false, // Try 'true' if the image is upside down or missing
-    opacity: 0.8,
-    attribution: 'WENT Landfill Imagery'
-}).addTo(map);
-=======
-    L.tileLayer('https://yobeeyuen.github.io/survey-map-went/tiles/{z}/{x}/{y}.png', {
-        minZoom: 0,
-        maxZoom: 20,
-        tms: false,
-        opacity: 0.8
-    }).addTo(map);
->>>>>>> aef48e7cd449dc3d533990b3c702ea870e77b768
-</script>
+            tms: false, // Often required for GDAL generated tiles
+            opacity: 0.8,
+            attribution: 'My Custom Geodata'
+        }).addTo(map);
+    </script>
 </body>
 </html>
